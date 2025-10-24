@@ -18,6 +18,7 @@ headers = {
 payload = [
   {
     "taskType": "imageInference",
+    # "taskUUID":"08fd181b-b1e2-4b94-aaec-7de50263b7f6"
     "numberResults": 1,
     "outputFormat": "WEBP",
     "width": 1344,
