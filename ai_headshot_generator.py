@@ -18,7 +18,7 @@ headers = {
 payload = [
   {
     "taskType": "imageInference",
-    # "taskUUID":"08fd181b-b1e2-4b94-aaec-7de50263b7f6"
+    "taskUUID":str(uuid.uuid4()),
     "numberResults": 1,
     "outputFormat": "WEBP",
     "width": 1344,
@@ -32,11 +32,12 @@ payload = [
       "dataURI",
       "URL"
     ],
-    "referenceImages": [
-      "img.jpg"
+    "referenceImages": [ # Replace this with a publicly accessible URL to your image
+      "https://media.allure.com/photos/595f1a341533d771860418bc/1:1/w_4750,h_4750,c_limit/GettyImages-521865021.jpg" 
     ],
     "model": "runware:108@20",
-    "positivePrompt": "Make this image a professional headshot. The subject should wear professional clothes in an office building."
+    "positivePrompt": "Make this image a professional headshot. The subject should wear professional clothes in an office building, sitting on an office chair with hands on desk and smiling. High detail, photorealistic, studio lighting, 8k resolution.",
+    "negativePrompt": "blurry, lowres, deformed, disfigured, ugly, bad anatomy, poorly drawn, mutation, mutated, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, fused fingers, too many fingers"
   }
 ]
 
